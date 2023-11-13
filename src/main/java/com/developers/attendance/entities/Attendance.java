@@ -1,8 +1,6 @@
 package com.developers.attendance.entities;
 
-import java.time.DayOfWeek;
-import java.time.LocalTime;
-import java.util.List;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,26 +11,23 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-@Entity
 @Table
-public class Subject {
-    
+@Entity
+public class Attendance {
+
     @Id
-    @Column(name = "subject_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
-    @Column
-    String name;
-
-    @Column
-    List<DayOfWeek> dayOfWeek;
-
-    @Column
-    LocalTime time;
+    @ManyToOne
+    @JoinColumn(name = "student_code")
+    Student student;
 
     @ManyToOne
-    @JoinColumn(name = "teacher_code")
-    Teacher teacher;
+    @JoinColumn(name = "subject_id")
+    Subject subject;
+
+    @Column
+    LocalDateTime datetime;
 
 }
