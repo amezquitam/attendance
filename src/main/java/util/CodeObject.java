@@ -1,2 +1,4 @@
-package util;public record CodeObject() {
+package util;
+
+public record CodeObject(String code) {
 }

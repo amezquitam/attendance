@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.developers.attendance.entities.Teacher;
 import com.developers.attendance.repository.TeacherRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class TeacherServiceImpl implements TeacherService {
 
     @Autowired

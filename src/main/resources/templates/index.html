@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html
-    xmlns:th="http://www.thymeleaf.org"
-    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
 >
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="robots" content="noindex" />
-        <link rel="stylesheet" type="text/css" href="./style.css" />
-        <script>
-            src = "./funciones.js";
-        </script>
-        <title>Registro de usuario</title>
-    </head>
-    <body>
-        <div class="container">
-            <form class="form" action="learn.html">
-                <h2 class="title">Confirma tu asistencia</h2>
-                <div class="input-group">
-                    <input
-                        required=""
-                        type="text"
-                        name="text"
-                        autocomplete="off"
-                        class="input"
-                    />
-                    <label class="user-label">Código estudiantil</label>
-                </div>
-                <input class="button" type="submit" value="Acceder" />
-            </form>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="robots" content="noindex"/>
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <script src="/funciones.js"></script>
+    <title>Registro de- usuario</title>
+</head>
+<body>
+<div class="container">
+    <form th:action="@{/validate-code}" th:object="${codeObject}" method="get" class="form">
+        <h2 class="title">Confirma tu asistencia</h2>
+        <div class="input-group">
+            <input
+                    required
+                    type="text"
+                    autocomplete="off"
+                    class="input"
+                    th:field="*{code}"
+                    id="student-code"
+            />
+            <label class="user-label" for="student-code">Código estudiantil</label>
         </div>
-    </body>
+        <input class="button" type="submit" value="Acceder"/>
+    </form>
+</div>
+</body>
 </html>
