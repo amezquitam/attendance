@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html 
+<html
     xmlns:th="http://www.thymeleaf.org"
-    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<head>
-    <meta charset="UTF-8">
-    <meta name="robots" content="noindex">
-    <link rel="stylesheet" type="text/css" href="estilo1.css">
-    <script> src="./funciones.js" </script>
-    <title>Registro de usuario</title>
-</head>
-<body>
-    <header class="header">
-        <h2>Confirma tu usuario</h2>
-    </header>
-    <article>
-        <form class="form" action="learn.html">
-            <input class="cuadro" type="text" placeholder="Digite su ID" required>
-            <input class="boton" type="submit" value="Acceder" >
-        </form>
-    </article>
-</body>
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="noindex" />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <script>
+            src = "./funciones.js";
+        </script>
+        <title>Registro de usuario</title>
+    </head>
+    <body>
+        <div class="container">
+            <form class="form" action="learn.html">
+                <h2 class="title">Confirma tu asistencia</h2>
+                <div class="input-group">
+                    <input
+                        required=""
+                        type="text"
+                        name="text"
+                        autocomplete="off"
+                        class="input"
+                    />
+                    <label class="user-label">Código estudiantil</label>
+                </div>
+                <input class="button" type="submit" value="Acceder" />
+            </form>
+        </div>
+    </body>
 </html>

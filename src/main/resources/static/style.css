@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(29, 31, 32, 0.904)
+        radial-gradient(rgba(137, 137, 137, 0.712) 10%, transparent 1%);
+    background-size: 11px 11px;
+
+    font-family: Poppins;
+}
+
+body {
+    margin: 0;
+}
+
+.title {
+    font-size: 28px;
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input {
+    border: solid 1.5px #9e9e9e;
+    border-radius: 7px;
+    background: none;
+    padding: 12px;
+    font-size: 18px;
+    color: #f5f5f5;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-label {
+    position: absolute;
+    left: 15px;
+    color: #e8e8e8;
+    pointer-events: none;
+    transform: translateY(0.9rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+input:valid {
+    outline: none;
+    border: 1.5px solid #1a73e8;
+}
+
+.input:focus ~ label,
+input:valid ~ label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: transparent;
+    padding: 0 0.2em;
+    color: #2196f3;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #1b1b1b;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #ee4e4e;
+}
+
+.button:hover {
+    box-shadow: inset 0 -100px 0 0 #fcff41;
+}
+
+.button:active {
+    transform: scale(0.9);
+}
