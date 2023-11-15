@@ -23,12 +23,13 @@ public class AttendanceRegister {
     }
 
     @GetMapping("/validate-code")
-    public String validateStudentCode(@ModelAttribute CodeObject codeObject) {
+    public String validateStudentCode(@ModelAttribute CodeObject codeObject, Model model) {
         Student savedStudent = studentService.findStudent(codeObject.code());
 
         System.out.println("Code entry: " + codeObject.code());
 
         if (savedStudent == null) {
+            model.addAttribute("error", "Código inexistente");
             return "index";
         }
 

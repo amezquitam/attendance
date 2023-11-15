@@ -12,7 +12,11 @@
         radial-gradient(rgba(137, 137, 137, 0.712) 10%, transparent 1%);
     background-size: 11px 11px;
 
-    font-family: Poppins;
+    font-family: Poppins, serif;
+}
+
+.error {
+    color: #ee4e4e;
 }
 
 body {
